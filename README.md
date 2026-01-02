@@ -33,9 +33,9 @@ I’m always excited to collaborate and create meaningful solutions! 🚀
 
 I’m always open to collaborating on projects or discussing new ideas!  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vivushan)  
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vivushan@example.com)  
-[![Portfolio](https://img.shields.io/badge/Portfolio-333333?style=for-the-badge&logo=readme&logoColor=white)](https://github.com/vivushan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahendran-rathishan-39812b316)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:skr2rathishan@gmail.com)  
+[![Portfolio](https://img.shields.io/badge/Portfolio-333333?style=for-the-badge&logo=readme&logoColor=white)](https://github.com/skr2rathishan-oss)
 
 ---
 
