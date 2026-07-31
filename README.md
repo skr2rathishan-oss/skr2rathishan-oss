@@ -75,50 +75,6 @@ I enjoy working across **Artificial Intelligence, Machine Learning, Full-Stack D
 
 ---
 
-## 🧠 Areas of Interest
-
-- 🤖 Artificial Intelligence
-- 🧠 Machine Learning
-- ✨ Generative AI & LLM Applications
-- 👁️ Computer Vision
-- 🌐 Full-Stack Web Development
-- ⚙️ Backend Engineering & REST APIs
-- 🦾 Robotics & IoT
-- ☁️ Cloud Computing
-- 🐳 DevOps & Containerization
-- 📊 Data Science
-- 🧩 Data Structures & Algorithms
-
----
-
-## 🔭 What I'm Building
-
-I'm interested in developing projects that combine **software engineering, AI, and real-world problem solving**.
-
-Some areas I'm currently exploring:
-
-- 🤖 AI-powered applications
-- 👁️ Computer Vision systems
-- 🧠 LLM-powered applications
-- 🌐 Full-stack platforms
-- 🦾 Robotics and IoT systems
-- ⚡ Intelligent automation
-- 🌍 Technology solutions for real-world problems
-
----
-
-## 📚 Currently Learning
-
-- Generative AI & Large Language Models
-- LangChain & AI Agents
-- Machine Learning
-- Computer Vision
-- Advanced Backend Development
-- Docker & Cloud Deployment
-- Data Structures & Algorithms
-- System Design
-
----
 
 # 📊 GitHub Statistics
 
