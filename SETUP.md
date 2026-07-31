@@ -1,15 +1,15 @@
-# 🚀 Rathishan GitHub Profile — Complete Stats Setup
+# 🚀 skr2rathishan-oss GitHub Profile — Complete Stats Setup
 
 This package is designed for the profile repository:
 
-`Rathishan/Rathishan`
+`skr2rathishan-oss/skr2rathishan-oss`
 
 It replaces the unreliable third-party stats cards with SVG files generated from **real GitHub GraphQL API data**.
 
 ## 📁 Files
 
 ```text
-Rathishan/
+skr2rathishan-oss/
 │
 ├── README.md
 │
@@ -33,7 +33,7 @@ The included `README.md` is already based on your existing profile README.
 Upload it to:
 
 ```text
-Rathishan/Rathishan
+skr2rathishan-oss/skr2rathishan-oss
 ```
 
 ## 2. Upload the workflow
@@ -68,7 +68,7 @@ assets/contribution-graph.svg
 
 Go to:
 
-**GitHub → Rathishan/Rathishan → Actions**
+**GitHub → skr2rathishan-oss/skr2rathishan-oss → Actions**
 
 Select:
 
@@ -144,7 +144,7 @@ Open the failed run and check the failed step.
 Most importantly, verify the repository is:
 
 ```text
-Rathishan/Rathishan
+skr2rathishan-oss/skr2rathishan-oss
 ```
 
 and that the workflow is located exactly at:

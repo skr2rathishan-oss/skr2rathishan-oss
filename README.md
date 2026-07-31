@@ -158,7 +158,7 @@ Some areas I'm currently exploring:
 <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 
-<a href="https://github.com/Rathishan">
+<a href="https://github.com/skr2rathishan-oss">
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
@@ -172,6 +172,6 @@ Some areas I'm currently exploring:
 
 ⭐ Thanks for visiting my profile!
 
-![Profile Views](https://komarev.com/ghpvc/?username=Rathishan&style=flat-square&color=blue)
+![Profile Views](https://komarev.com/ghpvc/?username=skr2rathishan-oss&style=flat-square&color=blue)
 
 </div>

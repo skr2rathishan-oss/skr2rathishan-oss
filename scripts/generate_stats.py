@@ -3,7 +3,7 @@ import os
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
-USERNAME = os.environ.get("GITHUB_USERNAME", "Rathishan")
+USERNAME = os.environ.get("GITHUB_USERNAME", "skr2rathishan-oss")
 TOKEN = os.environ["GITHUB_TOKEN"]
 OUTPUT_DIR = "assets"
 
@@ -50,7 +50,7 @@ def fetch_user():
         headers={
             "Authorization": f"Bearer {TOKEN}",
             "Content-Type": "application/json",
-            "User-Agent": "Rathishan-GitHub-Profile-Stats",
+            "User-Agent": "skr2rathishan-oss-GitHub-Profile-Stats",
         },
         method="POST",
     )
