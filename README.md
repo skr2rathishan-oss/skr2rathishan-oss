@@ -111,21 +111,67 @@ I enjoy turning ideas into **practical, scalable, and easy-to-use products**. My
 
 ## GitHub Analytics
 
+<p align="center">
+  <sub>Live data from the GitHub GraphQL API · refreshed automatically every day</sub>
+</p>
+
 <div align="center">
 
-<img src="./assets/github-stats.svg" alt="GitHub statistics" width="850" />
+<a href="https://github.com/skr2rathishan-oss">
+  <img src="./assets/github-stats.svg" alt="Live GitHub analytics dashboard" width="900" />
+</a>
 
-<br><br>
+</div>
 
-<img src="./assets/languages.svg" alt="Languages used across public repositories" width="580" />
-
-<br><br>
-
-<img src="./assets/contribution-graph.svg" alt="GitHub contribution graph" width="900" />
+<details open>
+<summary><b>📡 Contribution Signal — explore the last 365 days</b></summary>
 
 <br>
 
-<sub>Statistics are generated automatically from real GitHub data using GitHub Actions.</sub>
+<div align="center">
+
+<a href="https://github.com/skr2rathishan-oss">
+  <img src="./assets/contribution-graph.svg" alt="Interactive GitHub contribution activity map" width="900" />
+</a>
+
+</div>
+
+</details>
+
+<details>
+<summary><b>🧬 Language Footprint — open the repository language map</b></summary>
+
+<br>
+
+<div align="center">
+
+<a href="https://github.com/skr2rathishan-oss?tab=repositories">
+  <img src="./assets/languages.svg" alt="Primary language distribution across public repositories" width="900" />
+</a>
+
+</div>
+
+</details>
+
+<div align="center">
+
+<br>
+
+<a href="https://github.com/skr2rathishan-oss?tab=repositories">
+  <img src="https://img.shields.io/badge/Explore-Repositories-8B5CF6?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore Rathishan's repositories" />
+</a>
+&nbsp;
+<a href="https://github.com/skr2rathishan-oss">
+  <img src="https://img.shields.io/badge/View-Live%20Activity-06B6D4?style=for-the-badge&amp;logo=githubactions&amp;logoColor=white" alt="View live GitHub activity" />
+</a>
+&nbsp;
+<a href="https://github.com/skr2rathishan-oss?tab=followers">
+  <img src="https://img.shields.io/badge/Follow-On%20GitHub-10B981?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Follow Rathishan on GitHub" />
+</a>
+
+<br><br>
+
+<sub>Click any dashboard to open the live profile · generated from real account data, never hard-coded</sub>
 
 </div>
 
