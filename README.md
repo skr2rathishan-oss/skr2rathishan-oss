@@ -1,133 +1,176 @@
-# 👋 Hi, I'm M. Rathishan
+<div align="center">
 
-### 💻 Computer Engineering Undergraduate | 🤖 AI & Software Engineering Enthusiast
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0F172A,45:312E81,100:06B6D4&amp;height=220&amp;section=header&amp;text=M.%20Rathishan&amp;fontSize=52&amp;fontColor=F8FAFC&amp;fontAlignY=36&amp;desc=Computer%20Engineering%20%7C%20AI%20%7C%20Software%20Development&amp;descAlignY=57&amp;descSize=18&amp;animation=fadeIn" width="100%" alt="M. Rathishan — Computer Engineering, AI and Software Development" />
 
-I'm a **Computer Engineering undergraduate at the University of Ruhuna, Sri Lanka**, interested in building practical software and AI-powered solutions.
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=600&amp;size=20&amp;duration=3000&amp;pause=900&amp;color=22D3EE&amp;center=true&amp;vCenter=true&amp;repeat=true&amp;width=760&amp;lines=Building+intelligent+software+that+solves+real+problems;Exploring+AI%2C+full-stack+development+and+automation;Learning+deeply.+Creating+boldly.+Improving+continuously." alt="Animated introduction" />
+</a>
 
-I enjoy working across **Artificial Intelligence, Machine Learning, Full-Stack Development, APIs, Automation, and Problem Solving** — turning ideas into projects that are useful, scalable, and easy to use.
+<p>
+  <a href="mailto:skr2rathishan@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&amp;logo=gmail&amp;logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/mahendran-rathishan-39812b316"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/skr2rathishan-oss"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub" /></a>
+  <a href="https://leetcode.com/u/CnHPITH07z/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&amp;logo=leetcode&amp;logoColor=black" alt="LeetCode" /></a>
+  <img src="https://komarev.com/ghpvc/?username=skr2rathishan-oss&amp;style=flat-square&amp;color=06B6D4&amp;label=PROFILE+VIEWS" alt="Profile views" />
+</p>
 
-- 🎓 Computer Engineering Undergraduate — University of Ruhuna
-- 🤖 Exploring **Artificial Intelligence, Machine Learning & Generative AI**
-- 💻 Building with **Python, C++, TypeScript & JavaScript**
-- 🌐 Developing **Full-Stack Web Applications & REST APIs**
-- 🧠 Practicing **Data Structures & Algorithms**
-- 🐳 Exploring **Docker, Cloud Technologies & Modern Developer Tools**
-- 🤝 Open to **collaboration, interesting projects, and learning opportunities**
+<a href="#about-me">About</a> &nbsp;•&nbsp;
+<a href="#technology-constellation">Technologies</a> &nbsp;•&nbsp;
+<a href="#github-analytics">Analytics</a> &nbsp;•&nbsp;
+<a href="#leetcode-progress">LeetCode</a> &nbsp;•&nbsp;
+<a href="#lets-connect">Connect</a>
+
+</div>
 
 ---
 
-## 🚀 Current Focus
+## About Me
 
-```text
-🤖 Artificial Intelligence & Machine Learning
-🧠 Generative AI • LLMs • Prompt Engineering
-🌐 Full-Stack Development
-⚙️ REST APIs • Backend Development
-🐳 Docker & Cloud Technologies
-💡 Data Structures & Algorithms
-🦾 Robotics & IoT
+```yaml
+name: M. Rathishan
+education: Computer Engineering Undergraduate — University of Ruhuna, Sri Lanka
+interests: [Artificial Intelligence, Machine Learning, Full-Stack Development]
+currently_exploring: [Generative AI, LLMs, Cloud Technologies, Docker]
+problem_solving: Data Structures & Algorithms
+mindset: Build. Learn. Improve. Repeat.
 ```
 
----
+I enjoy turning ideas into **practical, scalable, and easy-to-use products**. My work sits at the intersection of software engineering and intelligent systems—from full-stack applications and REST APIs to machine learning, automation, robotics, and IoT.
 
-## 🛠️ Tech Stack
+> Open to collaborating on meaningful projects, learning with ambitious teams, and building technology that makes a difference.
 
-### 💻 Programming Languages
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-
-### 🌐 Web Development
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![REST API](https://img.shields.io/badge/REST%20API-02569B?style=for-the-badge)
-
-### 🤖 AI / Machine Learning
-
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Scikit Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge)
-![Generative AI](https://img.shields.io/badge/Generative%20AI-8E44AD?style=for-the-badge)
-
-### 📊 Data & Scientific Computing
-
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-0C55A5?style=for-the-badge&logo=scipy&logoColor=white)
-
-### 🗄️ Databases
-
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
-### ☁️ Tools & Technologies
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-
----
-
-
-# 📊 GitHub Statistics
+## Current Focus
 
 <div align="center">
 
-<img src="./assets/github-stats.svg" alt="GitHub Statistics" width="850">
+| 🤖 Intelligent Systems | 🌐 Software Engineering | ⚙️ Engineering Practice |
+| :---: | :---: | :---: |
+| AI & Machine Learning | Full-Stack Applications | REST APIs & Automation |
+| Generative AI & LLMs | Backend Development | Docker & Cloud Tools |
+| Robotics & IoT | TypeScript & JavaScript | Data Structures & Algorithms |
+
+</div>
+
+---
+
+## Technology Constellation
+
+<p align="center"><sub>Click a category to expand it, then hover over or select any icon to explore the technology.</sub></p>
+
+<details open>
+<summary><b>💻 Programming Languages</b></summary>
+<br>
+<p align="center">
+  <a href="https://www.python.org/" title="Python"><img src="https://skillicons.dev/icons?i=python" width="52" height="52" alt="Python" /></a>&nbsp;
+  <a href="https://isocpp.org/" title="C++"><img src="https://skillicons.dev/icons?i=cpp" width="52" height="52" alt="C++" /></a>&nbsp;
+  <a href="https://developer.mozilla.org/docs/Web/JavaScript" title="JavaScript"><img src="https://skillicons.dev/icons?i=js" width="52" height="52" alt="JavaScript" /></a>&nbsp;
+  <a href="https://www.typescriptlang.org/" title="TypeScript"><img src="https://skillicons.dev/icons?i=ts" width="52" height="52" alt="TypeScript" /></a>
+</p>
+</details>
+
+<details open>
+<summary><b>🌐 Web & API Development</b></summary>
+<br>
+<p align="center">
+  <a href="https://react.dev/" title="React"><img src="https://skillicons.dev/icons?i=react" width="52" height="52" alt="React" /></a>&nbsp;
+  <a href="https://nodejs.org/" title="Node.js"><img src="https://skillicons.dev/icons?i=nodejs" width="52" height="52" alt="Node.js" /></a>&nbsp;
+  <a href="https://expressjs.com/" title="Express"><img src="https://skillicons.dev/icons?i=express" width="52" height="52" alt="Express" /></a>&nbsp;
+  <a href="https://www.postman.com/" title="Postman & REST APIs"><img src="https://skillicons.dev/icons?i=postman" width="52" height="52" alt="Postman and REST APIs" /></a>
+</p>
+</details>
+
+<details open>
+<summary><b>🤖 AI, Machine Learning & Data</b></summary>
+<br>
+<p align="center">
+  <a href="https://www.tensorflow.org/" title="TensorFlow"><img src="https://skillicons.dev/icons?i=tensorflow" width="52" height="52" alt="TensorFlow" /></a>&nbsp;
+  <a href="https://pytorch.org/" title="PyTorch"><img src="https://skillicons.dev/icons?i=pytorch" width="52" height="52" alt="PyTorch" /></a>&nbsp;
+  <a href="https://scikit-learn.org/" title="Scikit-learn"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" width="52" height="52" alt="Scikit-learn" /></a>&nbsp;
+  <a href="https://www.langchain.com/" title="LangChain"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" width="52" height="52" alt="LangChain" /></a>&nbsp;
+  <a href="https://numpy.org/" title="NumPy"><img src="https://skillicons.dev/icons?i=numpy" width="52" height="52" alt="NumPy" /></a>&nbsp;
+  <a href="https://pandas.pydata.org/" title="Pandas"><img src="https://cdn.simpleicons.org/pandas/150458" width="52" height="52" alt="Pandas" /></a>&nbsp;
+  <a href="https://scipy.org/" title="SciPy"><img src="https://cdn.simpleicons.org/scipy/8CAAE6" width="52" height="52" alt="SciPy" /></a>
+</p>
+</details>
+
+<details open>
+<summary><b>🗄️ Databases, Cloud & Developer Tools</b></summary>
+<br>
+<p align="center">
+  <a href="https://www.mongodb.com/" title="MongoDB"><img src="https://skillicons.dev/icons?i=mongodb" width="52" height="52" alt="MongoDB" /></a>&nbsp;
+  <a href="https://www.mysql.com/" title="MySQL"><img src="https://skillicons.dev/icons?i=mysql" width="52" height="52" alt="MySQL" /></a>&nbsp;
+  <a href="https://git-scm.com/" title="Git"><img src="https://skillicons.dev/icons?i=git" width="52" height="52" alt="Git" /></a>&nbsp;
+  <a href="https://github.com/" title="GitHub"><img src="https://skillicons.dev/icons?i=github" width="52" height="52" alt="GitHub" /></a>&nbsp;
+  <a href="https://www.docker.com/" title="Docker"><img src="https://skillicons.dev/icons?i=docker" width="52" height="52" alt="Docker" /></a>&nbsp;
+  <a href="https://azure.microsoft.com/" title="Microsoft Azure"><img src="https://skillicons.dev/icons?i=azure" width="52" height="52" alt="Microsoft Azure" /></a>&nbsp;
+  <a href="https://firebase.google.com/" title="Firebase"><img src="https://skillicons.dev/icons?i=firebase" width="52" height="52" alt="Firebase" /></a>
+</p>
+</details>
+
+---
+
+## GitHub Analytics
+
+<div align="center">
+
+<img src="./assets/github-stats.svg" alt="GitHub statistics" width="850" />
 
 <br><br>
 
-<img src="./assets/languages.svg" alt="Languages by Public Repositories" width="580">
+<img src="./assets/languages.svg" alt="Languages used across public repositories" width="580" />
 
-</div>
+<br><br>
 
-> 📌 Statistics are generated automatically from real GitHub data using GitHub Actions.
+<img src="./assets/contribution-graph.svg" alt="GitHub contribution graph" width="900" />
 
----
+<br>
 
-# 📈 GitHub Contribution Graph
-
-<div align="center">
-
-<img src="./assets/contribution-graph.svg" alt="GitHub Contribution Graph" width="900">
+<sub>Statistics are generated automatically from real GitHub data using GitHub Actions.</sub>
 
 </div>
 
 ---
 
-## 🌐 Connect With Me
+## LeetCode Progress
 
 <div align="center">
+
+<a href="https://leetcode.com/u/CnHPITH07z/">
+  <img src="https://leetcard.jacoblin.cool/CnHPITH07z?theme=dark&amp;font=JetBrains%20Mono&amp;ext=heatmap" alt="Rathishan's LeetCode statistics and submission heatmap" width="850" />
+</a>
+
+<br><br>
+
+<a href="https://leetcode.com/u/CnHPITH07z/">
+  <img src="https://img.shields.io/badge/LeetCode-View%20My%20Profile-FFA116?style=for-the-badge&amp;logo=leetcode&amp;logoColor=black" alt="View Rathishan's LeetCode profile" />
+</a>
+
+</div>
+
+---
+
+## Let's Connect
+
+<div align="center">
+
+I’m always happy to discuss **AI, software engineering, open-source ideas, or a project worth building**.
+
+<br>
 
 <a href="https://www.linkedin.com/in/mahendran-rathishan-39812b316">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Let's%20connect-LinkedIn-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="Connect on LinkedIn" />
 </a>
-
+&nbsp;
 <a href="mailto:skr2rathishan@gmail.com">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Start%20a%20conversation-Email-EA4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white" alt="Send an email" />
 </a>
 
-<a href="https://github.com/skr2rathishan-oss">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+<br><br>
 
-</div>
+### Build. Learn. Improve. Repeat.
 
----
+<sub>Thanks for visiting—if something here inspires you, feel free to connect.</sub>
 
-<div align="center">
-
-### 💡 Build. Learn. Improve. Repeat.
-
-⭐ Thanks for visiting my profile!
-
-![Profile Views](https://komarev.com/ghpvc/?username=skr2rathishan-oss&style=flat-square&color=blue)
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0F172A,45:312E81,100:06B6D4&amp;height=120&amp;section=footer" width="100%" alt="Footer decoration" />
 
 </div>
