@@ -182,7 +182,7 @@ I enjoy turning ideas into **practical, scalable, and easy-to-use products**. My
 <div align="center">
 
 <a href="https://leetcode.com/u/CnHPITH07z/">
-  <img src="https://leetcard.jacoblin.cool/CnHPITH07z?theme=dark&amp;font=JetBrains%20Mono&amp;ext=heatmap" alt="Rathishan's LeetCode statistics and submission heatmap" width="850" />
+  <img src="./assets/leetcode-stats.svg" alt="Rathishan's automatically updated LeetCode statistics and submission heatmap" width="850" />
 </a>
 
 <br><br>
@@ -190,6 +190,10 @@ I enjoy turning ideas into **practical, scalable, and easy-to-use products**. My
 <a href="https://leetcode.com/u/CnHPITH07z/">
   <img src="https://img.shields.io/badge/LeetCode-View%20My%20Profile-FFA116?style=for-the-badge&amp;logo=leetcode&amp;logoColor=black" alt="View Rathishan's LeetCode profile" />
 </a>
+
+<br><br>
+
+<sub>Statistics refresh automatically every six hours through GitHub Actions.</sub>
 
 </div>
 
