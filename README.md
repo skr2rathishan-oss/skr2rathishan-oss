@@ -215,7 +215,7 @@ I’m always happy to discuss **AI, software engineering, open-source ideas, or 
 
 ### Build. Learn. Improve. Repeat.
 
-<sub>Thanks for visiting—if something here inspires you, feel free to connect.</sub>
+<sub>Thanks for visiting if something here inspires you, feel free to connect.</sub>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0F172A,45:312E81,100:06B6D4&amp;height=120&amp;section=footer" width="100%" alt="Footer decoration" />
 
