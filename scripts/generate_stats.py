@@ -116,6 +116,68 @@ def calculate_streaks(days):
     return current, longest
 
 
+def streak_details(days):
+    ordered = sorted(days, key=lambda day: day["date"])
+    active_runs = []
+    run_start = None
+    run_end = None
+
+    for day in ordered:
+        current_date = datetime.fromisoformat(day["date"]).date()
+        if day["contributionCount"] > 0:
+            if run_start is None:
+                run_start = current_date
+            run_end = current_date
+        elif run_start is not None:
+            active_runs.append((run_start, run_end))
+            run_start = run_end = None
+
+    if run_start is not None:
+        active_runs.append((run_start, run_end))
+
+    longest_start = longest_end = None
+    if active_runs:
+        longest_start, longest_end = max(
+            active_runs,
+            key=lambda run: (run[1] - run[0]).days,
+        )
+
+    today = datetime.now(timezone.utc).date()
+    recent_cutoff = today - timedelta(days=1)
+    current_start = current_end = None
+    for start, end in reversed(active_runs):
+        if end >= recent_cutoff:
+            current_start, current_end = start, end
+        break
+
+    last_active = active_runs[-1][1] if active_runs else None
+    return {
+        "period_start": datetime.fromisoformat(ordered[0]["date"]).date() if ordered else None,
+        "last_active": last_active,
+        "current_start": current_start,
+        "current_end": current_end,
+        "longest_start": longest_start,
+        "longest_end": longest_end,
+    }
+
+
+def short_date(value, include_year=False):
+    if value is None:
+        return "No activity yet"
+    pattern = "%b %d, %Y" if include_year else "%b %d"
+    return value.strftime(pattern).replace(" 0", " ")
+
+
+def date_range(start, end):
+    if start is None or end is None:
+        return "No active streak yet"
+    if start == end:
+        return short_date(start, include_year=True)
+    if start.year == end.year:
+        return f"{short_date(start)} — {short_date(end)}, {end.year}"
+    return f"{short_date(start, include_year=True)} — {short_date(end, include_year=True)}"
+
+
 def language_counts(repositories):
     result = {}
 
@@ -172,9 +234,14 @@ def svg_defs():
         .fade { animation: rise .7s ease-out both; }
         .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; }
         .flow { animation: flow 5s linear infinite; }
+        .ring { animation: drawRing 1.4s cubic-bezier(.22,.9,.32,1) both, ringGlow 2.8s ease-in-out 1.4s infinite; }
+        .stat-zone { transition: opacity .2s ease; }
+        .stat-zone:hover { opacity: .82; }
         @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
         @keyframes flow { to { stroke-dashoffset: -80; } }
+        @keyframes drawRing { from { stroke-dashoffset: 402; } to { stroke-dashoffset: 0; } }
+        @keyframes ringGlow { 0%, 100% { opacity: .82; } 50% { opacity: 1; } }
         @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
       </style>
     </defs>
@@ -200,6 +267,7 @@ def stats_svg(user):
     calendar = collection["contributionCalendar"]
     days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
     current, longest = calculate_streaks(days)
+    details = streak_details(days)
 
     repositories = user["repositories"]["nodes"]
     stars = sum(repo["stargazerCount"] for repo in repositories)
@@ -208,76 +276,65 @@ def stats_svg(user):
     prs = collection["totalPullRequestContributions"]
     issues = collection["totalIssueContributions"]
     updated = datetime.now(timezone.utc).strftime("%d %b %Y · %H:%M UTC").upper()
-
-    hero_cards = [
-        ("CONTRIBUTIONS", contributions, "activity in the last year", "#22d3ee"),
-        ("CURRENT STREAK", current, "consecutive active days", "#34d399"),
-        ("LONGEST STREAK", longest, "personal consistency record", "#a78bfa"),
-    ]
-    small_cards = [
-        ("PUBLIC REPOSITORIES", user["repositories"]["totalCount"], "01"),
-        ("STARS EARNED", stars, "02"),
-        ("FOLLOWERS", user["followers"]["totalCount"], "03"),
-    ]
+    contribution_period = (
+        f'{short_date(details["period_start"], include_year=True)} — PRESENT'
+        if details["period_start"]
+        else "PAST 365 DAYS"
+    )
+    current_period = (
+        date_range(details["current_start"], details["current_end"])
+        if current > 0
+        else f'Last active {short_date(details["last_active"], include_year=True)}'
+    )
+    longest_period = date_range(details["longest_start"], details["longest_end"])
 
     output = [
-        svg_frame(900, 475, "GitHub analytics dashboard", "Live GitHub contribution, streak, repository, star, follower, commit, pull request, and issue statistics."),
+        svg_frame(900, 410, "GitHub streak analytics", "A neon three-column GitHub dashboard showing total contributions, current streak, longest streak, and supporting profile metrics."),
         '<g class="fade">',
-        '<circle cx="42" cy="41" r="6" fill="#34d399" filter="url(#softGlow)" class="pulse"/>',
-        '<text x="58" y="46" fill="#e2e8f0" font-size="20" font-weight="700" letter-spacing="1.8">GITHUB ANALYTICS</text>',
-        f'<text x="58" y="69" fill="#64748b" font-size="12" class="mono">@{esc(user["login"])}</text>',
-        f'<text x="858" y="46" fill="#94a3b8" font-size="11" text-anchor="end" class="mono">UPDATED {esc(updated)}</text>',
-        '<text x="858" y="68" fill="#22d3ee" font-size="10" text-anchor="end" letter-spacing="1.4">LIVE · GITHUB GRAPHQL</text>',
+        '<circle cx="40" cy="37" r="5" fill="#76ff03" filter="url(#softGlow)" class="pulse"/>',
+        '<text x="55" y="42" fill="#f8fafc" font-size="19" font-weight="700" letter-spacing="1.6">GITHUB ANALYTICS</text>',
+        f'<text x="858" y="40" fill="#64748b" font-size="10" text-anchor="end" class="mono">UPDATED {esc(updated)}</text>',
         '</g>',
-    ]
+        '<rect x="34" y="67" width="832" height="274" rx="17" fill="#030507" stroke="#1f2937"/>',
+        '<rect x="35" y="68" width="830" height="272" rx="16" fill="none" stroke="url(#accent)" stroke-opacity="0.22"/>',
+        '<path d="M311 99V309M589 99V309" stroke="#64748b" stroke-opacity="0.75"/>',
 
-    for index, (label, value, note, color) in enumerate(hero_cards):
-        x = 34 + index * 284
-        output.extend([
-            f'<g class="fade" style="animation-delay:{index * 90}ms">',
-            f'<rect x="{x}" y="94" width="264" height="137" rx="16" fill="url(#card)" stroke="#263449"/>',
-            f'<rect x="{x}" y="94" width="4" height="137" rx="2" fill="{color}"/>',
-            f'<circle cx="{x + 231}" cy="126" r="17" fill="{color}" fill-opacity="0.10"/>',
-            f'<circle cx="{x + 231}" cy="126" r="4" fill="{color}" class="pulse"/>',
-            f'<text x="{x + 22}" y="124" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1.25">{label}</text>',
-            f'<text x="{x + 22}" y="174" fill="#f8fafc" font-size="42" font-weight="750" class="mono">{esc(value)}</text>',
-            f'<text x="{x + 22}" y="207" fill="#64748b" font-size="12">{note}</text>',
-            '</g>',
-        ])
+        '<g class="stat-zone fade" style="animation-delay:100ms">',
+        f'<text x="172" y="158" fill="#76ff03" font-size="42" font-weight="800" text-anchor="middle" class="mono">{contributions}</text>',
+        '<text x="172" y="201" fill="#76ff03" font-size="16" font-weight="600" text-anchor="middle">Total Contributions</text>',
+        f'<text x="172" y="238" fill="#f1f5f9" font-size="12" text-anchor="middle" class="mono">{esc(contribution_period)}</text>',
+        f'<text x="172" y="285" fill="#64748b" font-size="10" text-anchor="middle" class="mono">{commits} COMMITS · {prs} PRS · {issues} ISSUES</text>',
+        '</g>',
 
-    for index, (label, value, number) in enumerate(small_cards):
-        x = 34 + index * 284
-        output.extend([
-            f'<g class="fade" style="animation-delay:{270 + index * 70}ms">',
-            f'<rect x="{x}" y="248" width="264" height="86" rx="14" fill="#111827" fill-opacity="0.84" stroke="#263449"/>',
-            f'<text x="{x + 20}" y="278" fill="#64748b" font-size="10" font-weight="700" letter-spacing="1.1">{label}</text>',
-            f'<text x="{x + 20}" y="316" fill="#e2e8f0" font-size="28" font-weight="700" class="mono">{esc(value)}</text>',
-            f'<text x="{x + 237}" y="316" fill="#334155" font-size="30" font-weight="700" text-anchor="end" class="mono">{number}</text>',
-            '</g>',
-        ])
+        '<g class="stat-zone fade" style="animation-delay:220ms">',
+        '<circle cx="450" cy="164" r="65" fill="#061006" stroke="#172033" stroke-width="8"/>',
+        '<circle cx="450" cy="164" r="65" fill="none" stroke="#76ff03" stroke-width="7" stroke-linecap="round" stroke-dasharray="402" class="ring" filter="url(#softGlow)" transform="rotate(-90 450 164)"/>',
+        '<circle cx="450" cy="164" r="54" fill="url(#glow)" opacity="0.55"/>',
+        '<path d="M450 76c8 9 8 18 1 24 11-2 17-11 13-22 11 7 16 18 12 28-4 12-14 18-26 18s-22-6-26-18c-4-11 2-23 14-30-2 10 1 17 7 20-2-8-1-14 5-20Z" fill="#76ff03" filter="url(#softGlow)" class="pulse"/>',
+        f'<text x="450" y="179" fill="#00c8ff" font-size="38" font-weight="800" text-anchor="middle" class="mono">{current}</text>',
+        '<text x="450" y="262" fill="#00c8ff" font-size="17" font-weight="700" text-anchor="middle">Current Streak</text>',
+        f'<text x="450" y="294" fill="#f1f5f9" font-size="11" text-anchor="middle" class="mono">{esc(current_period)}</text>',
+        '</g>',
 
-    activity_total = max(commits + prs + issues, 1)
-    commit_width = 832 * commits / activity_total
-    pr_width = 832 * prs / activity_total
-    issue_width = 832 - commit_width - pr_width
+        '<g class="stat-zone fade" style="animation-delay:340ms">',
+        f'<text x="728" y="158" fill="#76ff03" font-size="42" font-weight="800" text-anchor="middle" class="mono">{longest}</text>',
+        '<text x="728" y="201" fill="#76ff03" font-size="16" font-weight="600" text-anchor="middle">Longest Streak</text>',
+        f'<text x="728" y="238" fill="#f1f5f9" font-size="12" text-anchor="middle" class="mono">{esc(longest_period)}</text>',
+        '<text x="728" y="285" fill="#64748b" font-size="10" text-anchor="middle" class="mono">PERSONAL CONSISTENCY RECORD</text>',
+        '</g>',
 
-    output.extend([
-        '<g class="fade" style="animation-delay:480ms">',
-        '<text x="34" y="375" fill="#cbd5e1" font-size="12" font-weight="700" letter-spacing="1.2">ACTIVITY MIX</text>',
-        f'<text x="866" y="375" fill="#64748b" font-size="11" text-anchor="end">{activity_total} recorded actions</text>',
-        '<rect x="34" y="391" width="832" height="12" rx="6" fill="#1e293b"/>',
-        f'<rect x="34" y="391" width="{commit_width:.1f}" height="12" rx="6" fill="#22d3ee"/>',
-        f'<rect x="{34 + commit_width:.1f}" y="391" width="{pr_width:.1f}" height="12" fill="#8b5cf6"/>',
-        f'<rect x="{34 + commit_width + pr_width:.1f}" y="391" width="{issue_width:.1f}" height="12" rx="6" fill="#34d399"/>',
-        '<circle cx="39" cy="438" r="4" fill="#22d3ee"/><text x="51" y="442" fill="#94a3b8" font-size="12">COMMITS</text>',
-        f'<text x="132" y="442" fill="#e2e8f0" font-size="12" font-weight="700" class="mono">{commits}</text>',
-        '<circle cx="218" cy="438" r="4" fill="#8b5cf6"/><text x="230" y="442" fill="#94a3b8" font-size="12">PULL REQUESTS</text>',
-        f'<text x="344" y="442" fill="#e2e8f0" font-size="12" font-weight="700" class="mono">{prs}</text>',
-        '<circle cx="430" cy="438" r="4" fill="#34d399"/><text x="442" y="442" fill="#94a3b8" font-size="12">ISSUES</text>',
-        f'<text x="495" y="442" fill="#e2e8f0" font-size="12" font-weight="700" class="mono">{issues}</text>',
-        '<text x="866" y="442" fill="#475569" font-size="10" text-anchor="end" class="mono">AUTOMATICALLY REFRESHED DAILY</text>',
+        '<g class="fade" style="animation-delay:500ms">',
+        '<text x="40" y="379" fill="#64748b" font-size="10" letter-spacing="1">PROFILE SIGNAL</text>',
+        f'<text x="155" y="379" fill="#cbd5e1" font-size="11" class="mono">{user["repositories"]["totalCount"]} REPOSITORIES</text>',
+        '<circle cx="278" cy="375" r="2" fill="#334155"/>',
+        f'<text x="299" y="379" fill="#cbd5e1" font-size="11" class="mono">{stars} STARS</text>',
+        '<circle cx="375" cy="375" r="2" fill="#334155"/>',
+        f'<text x="396" y="379" fill="#cbd5e1" font-size="11" class="mono">{user["followers"]["totalCount"]} FOLLOWERS</text>',
+        '<circle cx="511" cy="375" r="2" fill="#334155"/>',
+        '<text x="532" y="379" fill="#22d3ee" font-size="10" class="mono">LIVE GITHUB GRAPHQL</text>',
+        '<text x="858" y="379" fill="#475569" font-size="9" text-anchor="end" class="mono">REFRESHED DAILY</text>',
         '</g></svg>',
-    ])
+    ]
 
     return "".join(output)
 
